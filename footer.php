@@ -37,7 +37,7 @@
                 <p class="small text-muted mb-0">&copy; <?php echo date('Y') ?> All rights reserved.</p>
               </div>
               <div class="col-lg-6 text-lg-right">
-                <p class="small text-muted mb-0">Developed and Design by <a class="text-white reset-anchor" href="#">WebVer</a></p>
+                <p class="small text-muted mb-0">Developed and Design by <a class="text-white reset-anchor" href="#">DAZ</a></p>
               </div>
             </div>
           </div>
