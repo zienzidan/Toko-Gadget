@@ -17,7 +17,7 @@ if($password !=$confirm){
 $cek=mysqli_query($koneksi,"SELECT * from pelanggan where email ='$email' or hp='$hp'");
 $num=mysqli_num_rows($cek);
 if($num==0){
-$insert=mysqli_query($koneksi,"INSERT INTO pelanggan VALUES ('','$nama', '$alamat','$hp','$email','$sha1', '$kota')");
+$insert=mysqli_query($koneksi,"INSERT INTO pelanggan VALUES (null,'$nama', '$alamat','$hp','$email','$sha1', '$kota')");
 if($insert){
 	echo"<script>alert('Terimakasih telah registrasi'); window.location.href='login.php' </script>";
 	}else{

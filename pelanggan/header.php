@@ -1,21 +1,18 @@
 <?php
- session_start();
-  include "koneksi.php";
+session_start();
+include "koneksi.php";
  
-  if ($_SESSION['status'] != 'login') {
+if ($_SESSION['status'] != 'login') {
   header("location:../login.php?pesan=gagal");
 }
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gadgetin | Olshop</title>
+    <title>Mitra Gadget</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -53,65 +50,75 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <!-- Link--><a class="nav-link active" href="index.php">Home</a>
+                <?php
+                $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+
+                if ($curPageName == 'index.php') {
+                  echo '<a class="nav-link active" href="index.php">Home</a>';
+                } else {
+                  echo '<a class="nav-link" href="index.php">Home</a>';
+                }
+                ?>
                 </li>
-               
                 <li class="nav-item">
-                  <!-- Link--><a class="nav-link" href="produk.php">Produk</a>
+                <?php
+                $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+
+                if ($curPageName == 'produk.php') {
+                  echo '<a class="nav-link active" href="produk.php">Produk</a>';
+                } else {
+                  echo '<a class="nav-link" href="produk.php">Produk</a>';
+                }
+                ?>
                 </li>
+                <?php
+                $data = mysqli_query($koneksi, "SELECT * FROM invoice where id_pelanggan='$_SESSION[id_pelanggan]' and status='Menunggu Pembayaran'");
+                $count = mysqli_num_rows($data);
+                ?>
+                <li class="nav-item">
+                <?php
+                $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 
-                 <?php
-              $data = mysqli_query($koneksi, "SELECT * FROM invoice where id_pelanggan='$_SESSION[id_pelanggan]' and status='Menunggu Pembayaran'");
-              $count = mysqli_num_rows($data);
-              ?>
-                  <li class="nav-item">
-                  <!-- Link--><a class="nav-link" href="konfirmasi.php">Konfirmasi&nbsp;<span class="badge badge-danger badge-pill"></span><?php if ($count == 0) {  ?></a>
+                if ($curPageName == 'konfirmasi.php') {
+                  echo '<a class="nav-link active" href="konfirmasi.php">Konfirmasi</a>';
+                } else {
+                  echo '<a class="nav-link" href="konfirmasi.php">Konfirmasi</a>';
+                }
+                ?>
                 </li>
+                <li class="nav-item">
+                <?php
+                $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 
-
-
-
-
-
-
-              
-
-                 <li class="nav-item">
-                  <!-- Link--><a class="nav-link" href="pesanan.php">Pesanan</a>
+                if ($curPageName == 'pesanan.php') {
+                  echo '<a class="nav-link active" href="pesanan.php">Pesanan</a>';
+                } else {
+                  echo '<a class="nav-link" href="pesanan.php">Pesanan</a>';
+                }
+                ?>
                 </li>
-                   <?php } ?>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
                   <div class="dropdown-menu mt-3" aria-labelledby="pagesDropdown"><a class="dropdown-item border-0 transition-link" href="cara_belanja.php">Cara Belanja</a><a class="dropdown-item border-0 transition-link" href="terms_condition.php">Term & Condition</a>
                 </li>
-                
               </ul>
-              
               <ul class="navbar-nav ml-auto">
-               <?php
+              <?php
               $query = mysqli_query($koneksi, "SELECT * FROM checkout where id_pelanggan = '$_SESSION[id_pelanggan]'");
               $count = mysqli_num_rows($query);
               ?>               
                 <li class="nav-item"><a class="nav-link" href="keranjang.php"> <i class="fas fa-shopping-cart mr-1 text-gray"></i><small class="text-gray"><?php echo $count; ?></small></a></li>
-
-
-
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, <?php echo $_SESSION['nm_pelanggan'] ?></a>
-                   <?php
+                <?php
                 $data = mysqli_query($koneksi,"SELECT pelanggan.id_pelanggan,pelanggan.nm_pelanggan,pelanggan.id_ongkir,pelanggan.hp,pelanggan.email,pelanggan.alamat,ongkir.kota FROM pelanggan join ongkir on pelanggan.id_ongkir=ongkir.id_ongkir where id_pelanggan='$_SESSION[id_pelanggan]'");
-                while($d = mysqli_fetch_array($data)){?>
-           
-                  <div class="dropdown-menu mt-3" aria-labelledby="pagesDropdown"><a class="dropdown-item border-0 transition-link" href="profile.php">Edit Profile</a>
+                while($d = mysqli_fetch_array($data)) { ?>
+                <div class="dropdown-menu mt-3" aria-labelledby="pagesDropdown"><a class="dropdown-item border-0 transition-link" href="profile.php">Edit Profile</a>
                     <a class="dropdown-item border-0 transition-link" href="ganti_password.php?id_pelanggan=<?php echo $d['id_pelanggan'] ?>">Ganti Password</a>
                     <a class="dropdown-item border-0 transition-link" href="logout.php"  onclick="return confirm('Yakin anda ingin keluar dari halaman ini?')">Logout</a>
-
-                     <?php }  ?>
-                </li>
-
+                </div>
+                <?php } ?>
                 </li>
               </ul>
-             
             </div>
           </nav>
         </div>
       </header>
-    

@@ -26,7 +26,7 @@ $tgl = date('d');
 $char = $thn.$bln.$tgl;
 $noInvoice = $char . sprintf("%02s", $noUrut);
 
-$insert = mysqli_query($koneksi,"INSERT into invoice VALUES('','$noInvoice','$hari_ini','$id_pelanggan','$sub_total','$ongkir','$bayar','Menunggu Pembayaran')");
+$insert = mysqli_query($koneksi,"INSERT into invoice VALUES(null,'$noInvoice','$hari_ini','$id_pelanggan','$sub_total','$ongkir','$bayar','Menunggu Pembayaran')");
 	
 $id_invoice = mysqli_insert_id($koneksi);
 $id_produk = $_POST['id_produk'];
