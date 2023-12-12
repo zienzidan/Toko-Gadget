@@ -2,8 +2,7 @@
     require "header.php";
 ?>
 
- 
-      <!-- HERO SECTION-->
+<!-- HERO SECTION-->
       <div class="container">
         <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(assets/img/hero-banner-alt.jpg)">
           <div class="container py-5">
@@ -134,7 +133,8 @@
           </div>
         </section>
       </div>
-     <!-- Footer -->
+
+<!-- Footer -->
 <?php 
   require "footer.php";
 ?>

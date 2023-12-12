@@ -8,7 +8,7 @@ require "koneksi.php";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gadgetin | Olshop</title>
+  <title>Mitra Abadi</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -37,10 +37,6 @@ require "koneksi.php";
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 
-
-
-
-
 <?php
 if (isset($_GET['pesan'])) {
   if ($_GET['pesan'] == "gagal") {
@@ -54,16 +50,11 @@ if (isset($_GET['pesan'])) {
     <!-- navbar-->
     <header class="header bg-white">
       <div class="container px-0 px-lg-3">
-        <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"><span class="font-weight-bold text-uppercase text-dark">Gadgetin.id</span></a>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"><span class="font-weight-bold text-uppercase text-dark">Mitra Abadi</span></a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-
-
-
-
-
                 <?php
                 $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 
@@ -75,11 +66,6 @@ if (isset($_GET['pesan'])) {
                 ?>
               </li>
               <li class="nav-item">
-
-
-
-
-
                 <?php
                 $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 
@@ -91,11 +77,6 @@ if (isset($_GET['pesan'])) {
                 ?>
               </li>
               <li class="nav-item">
-
-
-
-
-
                 <?php
                 $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 
@@ -117,7 +98,4 @@ if (isset($_GET['pesan'])) {
           </div>
         </nav>
       </div>
-
-
-
     </header>
