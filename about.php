@@ -1,7 +1,7 @@
 <?php
- 
-  include "header.php";
-  
+
+include "header.php";
+
 ?>
 
 <!-- Header -->
@@ -14,39 +14,41 @@
         <h1 class="h2 text-uppercase mb-0">Tentang</h1>
       </div>
       <div class="col-lg-6 text-lg-right">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Tentang</li>
-            </ol>
-          </nav>
-      </div>
-    </div>
-    </div>
-</section>
-
-<section class="py-5">
-    <div class="container">
-  <div class="card mb-3">
-  <div class="row no-gutters">
-   
-    <div class="col-md-12">
-      <div class="card-body shadow bg-white rounded">
-        <h2 class="card-title text-center">Tentang Kami</h2>
-        <hr>  
-        <p class="card-text">Gadgetin.id merupakan salah satu toko penjualan barang elektronik secara online yang memfokuskan pada sebuah merek terkemuka di dunia. Berawal dari ide sang pemilik, Ucup SI yang sangat begitu antusias dengan produk Apple, menjadikan sebuah ide bisnis untuk melakukan penjualan produk tersebut secara luas melalui media sosial.</p>
-
-        <p class="card-text">Merintis dari salah satu platform sosial media yang saat itu sedang ramai dan berhasil mencetak puluhan orderan pada bulan Januari waktu itu. Sampai saat ini Gadgetin.id membuka salah satu penjualan melalui website pribadi yang diharapkan nantinya akan mempermudah customer yang melakukan pemesanan atau hanya sekedar melihat spesifikasi dari gadget yang ingin dibeli.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tentang</li>
+          </ol>
+        </nav>
       </div>
     </div>
   </div>
-</div>
-</div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="card mb-3">
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+          <div class="card-body shadow bg-white rounded">
+            <h2 class="card-title text-center">Tentang Kami</h2>
+            <hr>
+            <p class="card-text">Selamat datang di PT. Mitra Abadi, pelopor inovasi dalam dunia teknologi. Sebagai perusahaan yang berdedikasi untuk menyediakan solusi gadget terkini, kami dengan bangga memperkenalkan diri sebagai mitra yang dapat diandalkan dalam memenuhi kebutuhan teknologimu.</p>
+
+            <p class="card-text">PT. Mitra Abadi didirikan dengan visi untuk membawa revolusi dalam cara kita berinteraksi dengan dunia di sekitar kita. Kami memahami bahwa gadget bukan hanya alat elektronik biasa, tetapi juga merupakan sarana untuk menghubungkan, berkreasi, dan memperluas potensi kita.</p>
+            <p class="card-text">Dengan koleksi produk terkini dari merek-merek terkemuka, PT. Mitra Abadi menawarkan rangkaian lengkap gadget mulai dari smartphone canggih, tablet inovatif, hingga aksesori modern yang dapat meningkatkan gaya hidup digitalmu. Kami selalu berusaha untuk menyediakan produk berkualitas tinggi yang memadukan performa unggul dengan desain yang menawan.</p>
+
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </section>
 <!-- footer -->
-<?php 
-  include "footer.php";
+<?php
+include "footer.php";
 ?>

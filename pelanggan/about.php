@@ -34,9 +34,10 @@
       <div class="card-body shadow bg-white rounded">
         <h2 class="card-title text-center">About Us</h2>
         <hr>  
-        <p class="card-text">Gadgetin.id merupakan salah satu toko penjualan barang elektronik secara online yang memfokuskan pada sebuah merek terkemuka di dunia. Berawal dari ide sang pemilik, Ucup SI yang sangat begitu antusias dengan produk Apple, menjadikan sebuah ide bisnis untuk melakukan penjualan produk tersebut secara luas melalui media sosial.</p>
+        <p class="card-text">Selamat datang di PT. Mitra Abadi, pelopor inovasi dalam dunia teknologi. Sebagai perusahaan yang berdedikasi untuk menyediakan solusi gadget terkini, kami dengan bangga memperkenalkan diri sebagai mitra yang dapat diandalkan dalam memenuhi kebutuhan teknologimu.</p>
 
-        <p class="card-text">Merintis dari salah satu platform sosial media yang saat itu sedang ramai dan berhasil mencetak puluhan orderan pada bulan Januari waktu itu. Sampai saat ini Gadgetin.id membuka salah satu penjualan melalui website pribadi yang diharapkan nantinya akan mempermudah customer yang melakukan pemesanan atau hanya sekedar melihat spesifikasi dari gadget yang ingin dibeli.</p>
+        <p class="card-text">PT. Mitra Abadi didirikan dengan visi untuk membawa revolusi dalam cara kita berinteraksi dengan dunia di sekitar kita. Kami memahami bahwa gadget bukan hanya alat elektronik biasa, tetapi juga merupakan sarana untuk menghubungkan, berkreasi, dan memperluas potensi kita.</p>
+        <p class="card-text">Dengan koleksi produk terkini dari merek-merek terkemuka, PT. Mitra Abadi menawarkan rangkaian lengkap gadget mulai dari smartphone canggih, tablet inovatif, hingga aksesori modern yang dapat meningkatkan gaya hidup digitalmu. Kami selalu berusaha untuk menyediakan produk berkualitas tinggi yang memadukan performa unggul dengan desain yang menawan.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
