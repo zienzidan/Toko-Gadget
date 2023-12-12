@@ -1,7 +1,5 @@
-<?php 
- 
-  include "header.php";
-  
+<?php
+    require "header.php";
 ?>
 
  
@@ -27,8 +25,8 @@
             <?php 
               $sql = "SELECT * FROM kategori INNER JOIN produk ON kategori.id_kategori=produk.id_produk";
                 $query = mysqli_query($koneksi, $sql);
-                while ($data = mysqli_fetch_array($query)){
-            ?>
+            while ($data = mysqli_fetch_array($query)){
+                ?>
             <div class="col-md-4 mb-4 mb-md-0"><a class="category-item" href="kategori.php?id_kategori=<?php echo $data['id_kategori'] ?>"><img class="img-fluid" src="<?php echo 'admin/upload/produk/'. $data['foto'] ?>" alt=""><strong class="category-item-title"><?php echo $data['nama_kategori'] ?></strong></a></div>
             <?php } ?>              
           </div>
@@ -45,7 +43,7 @@
             <?php 
                 $sql = "SELECT * FROM kategori INNER JOIN produk ON kategori.id_kategori=produk.id_produk";
                 $query = mysqli_query($koneksi, $sql);
-                while ($data = mysqli_fetch_array($query)) { ?>
+            while ($data = mysqli_fetch_array($query)) { ?>
             <div class="col-xl-3 col-lg-4 col-sm-6">
               
               <div class="product text-center">
@@ -60,11 +58,11 @@
                   </div>
                 </div>
                 <h6> <a class="reset-anchor" href="produk.php"><?php echo $data['nama_produk'] ?></a></h6>
-                <p class="small text-muted">Rp. <?php echo number_format($data['harga'],0, ',', '.');?></p>
+                <p class="small text-muted">Rp. <?php echo number_format($data['harga'], 0, ',', '.');?></p>
               </div>
             
             </div>
-              <?php } ?>
+            <?php } ?>
       
           </div>
         </section>
@@ -138,5 +136,5 @@
       </div>
      <!-- Footer -->
 <?php 
-  include "footer.php";
+  require "footer.php";
 ?>
